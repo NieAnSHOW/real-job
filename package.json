@@ -1,0 +1,37 @@
+{
+  "name": "real-job",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Free Chrome side-panel assistant with user-owned official API credentials.",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "wxt -b chrome",
+    "build": "wxt build -b chrome",
+    "zip": "wxt zip -b chrome",
+    "typecheck": "wxt prepare && vue-tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "npm run typecheck && npm run lint && npm run test",
+    "postinstall": "wxt prepare"
+  },
+  "dependencies": {
+    "vue": "3.5.44"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/chrome": "0.3.6",
+    "@types/node": "^22.0.0",
+    "@wxt-dev/module-vue": "1.0.3",
+    "eslint": "10.13.0",
+    "eslint-plugin-vue": "10.11.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.72.0",
+    "vitest": "5.0.5",
+    "vue-tsc": "3.3.13",
+    "wxt": "0.21.5"
+  }
+}
